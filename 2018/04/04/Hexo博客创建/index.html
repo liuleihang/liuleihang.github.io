@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="title: Hexo博客创建参考https://oliverqueen.cn/2018/01/25/可能是最全的使用HEXO搭建个人博客教程/ 一.安装node版本管理工具NVM1.NVM Github地址https://github.com/coreybutler/nvm-windows 2.NVM常用命令nvm list        /*列出node.js列表*/ nvm on">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/2018/04/04/Hexo博客创建/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="title: Hexo博客创建参考https://oliverqueen.cn/2018/01/25/可能是最全的使用HEXO搭建个人博客教程/ 一.安装node版本管理工具NVM1.NVM Github地址https://github.com/coreybutler/nvm-windows 2.NVM常用命令nvm list        /*列出node.js列表*/ nvm on">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-04-04T15:42:09.679Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="title: Hexo博客创建参考https://oliverqueen.cn/2018/01/25/可能是最全的使用HEXO搭建个人博客教程/ 一.安装node版本管理工具NVM1.NVM Github地址https://github.com/coreybutler/nvm-windows 2.NVM常用命令nvm list        /*列出node.js列表*/ nvm on">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Hexo博客创建" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/04/04/Hexo博客创建/" class="article-date">
+  <time datetime="2018-04-04T15:20:51.688Z" itemprop="datePublished">2018-04-04</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<h2 id="title-Hexo博客创建"><a href="#title-Hexo博客创建" class="headerlink" title="title: Hexo博客创建"></a>title: Hexo博客创建</h2><h4 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h4><pre><code>https://oliverqueen.cn/2018/01/25/可能是最全的使用HEXO搭建个人博客教程/
+</code></pre><h2 id="一-安装node版本管理工具NVM"><a href="#一-安装node版本管理工具NVM" class="headerlink" title="一.安装node版本管理工具NVM"></a>一.安装node版本管理工具NVM</h2><h3 id="1-NVM-Github地址"><a href="#1-NVM-Github地址" class="headerlink" title="1.NVM Github地址"></a>1.NVM Github地址</h3><pre><code>https://github.com/coreybutler/nvm-windows
+</code></pre><h3 id="2-NVM常用命令"><a href="#2-NVM常用命令" class="headerlink" title="2.NVM常用命令"></a>2.NVM常用命令</h3><pre><code>nvm list        /*列出node.js列表*/
+nvm on          /*启用node.js版本管理*/
+nvm off         /*禁用node.js版本管理（不会卸载任何东西）*/
+nvm use &lt;version&gt;     /*切换到使用指定的版本*/
+nvm version           /*显示当前正在运行的NVM for Windows版本*/
+nvm install &lt;version&gt; /*安装指定版本的nodejs*/
+nvm uninstall &lt;version&gt; /*卸载指定版本*/
+nvm node_mirror &lt;node_mirror_url&gt; /*设置node下载镜像*/
+nvm npm_mirror &lt;node_mirror_url&gt; /*设置npm下载镜像*/
+</code></pre><h2 id="二、安装nodejs和配置npm"><a href="#二、安装nodejs和配置npm" class="headerlink" title="二、安装nodejs和配置npm"></a>二、安装nodejs和配置npm</h2><h3 id="1-使用nvm安装nodejs"><a href="#1-使用nvm安装nodejs" class="headerlink" title="1.使用nvm安装nodejs"></a>1.使用nvm安装nodejs</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">C:\WINDOWS\system32&gt;nvm install 8.11.1</span><br><span class="line">Downloading node.js version 8.11.1 (64-bit)...</span><br><span class="line">Complete</span><br><span class="line">Creating d:\nvm\temp</span><br><span class="line"></span><br><span class="line">Downloading npm version 5.6.0... Complete</span><br><span class="line">Installing npm v5.6.0...</span><br><span class="line"></span><br><span class="line">Installation complete. If you want to use this version, type</span><br><span class="line"></span><br><span class="line">nvm use 8.11.1</span><br></pre></td></tr></table></figure>
+<p>使用对应版本的nodejs<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm use 8.11.1</span><br></pre></td></tr></table></figure></p>
+<h3 id="2-npm配置"><a href="#2-npm配置" class="headerlink" title="2.npm配置"></a>2.npm配置</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm config set cache &quot;D:\nodejs\node_tmp&quot;</span><br><span class="line">npm config set userconfig&quot;D:\nodejs\etc\.npmrc&quot;</span><br><span class="line">npm config set registry https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+<h2 id="三、安装和配置Hexo"><a href="#三、安装和配置Hexo" class="headerlink" title="三、安装和配置Hexo"></a>三、安装和配置Hexo</h2><h4 id="1-安装hexo"><a href="#1-安装hexo" class="headerlink" title="1.安装hexo"></a>1.安装hexo</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo -g</span><br></pre></td></tr></table></figure>
+<p>hexo -v，检查hexo是否安装成功<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">C:\WINDOWS\system32&gt;hexo version</span><br><span class="line">hexo-cli: 1.1.0</span><br><span class="line">os: Windows_NT 10.0.16299 win32 x64</span><br><span class="line">http_parser: 2.8.0</span><br><span class="line">node: 8.11.1</span><br><span class="line">v8: 6.2.414.50</span><br><span class="line">uv: 1.19.1</span><br><span class="line">zlib: 1.2.11</span><br><span class="line">ares: 1.10.1-DEV</span><br><span class="line">modules: 57</span><br><span class="line">nghttp2: 1.25.0</span><br><span class="line">openssl: 1.0.2o</span><br><span class="line">icu: 60.1</span><br><span class="line">unicode: 10.0</span><br><span class="line">cldr: 32.0</span><br><span class="line">tz: 2017c</span><br></pre></td></tr></table></figure></p>
+<h3 id="2-创建blog工程"><a href="#2-创建blog工程" class="headerlink" title="2.创建blog工程"></a>2.创建blog工程</h3><ul>
+<li><p>创建blog文件夹并进入，初始hexo</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>生成静态文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>启动服务器。默认情况下，访问网址为： <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="3-将Hexo与Github-page联系起来"><a href="#3-将Hexo与Github-page联系起来" class="headerlink" title="3.将Hexo与Github page联系起来"></a>3.将Hexo与Github page联系起来</h3><ul>
+<li><p>设置Git的user name和email</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name &quot;liuleihang&quot;</span><br><span class="line">$ git config --global user.email  &quot;474733548@qq.com&quot;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>生成密钥</p>
+</li>
+</ul>
+<h4 id="检查-SSH-keys的设置"><a href="#检查-SSH-keys的设置" class="headerlink" title="检查 SSH keys的设置"></a>检查 SSH keys的设置</h4><p>首先我们需要检查你电脑上现有的 ssh key：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cd ~/.ssh 检查本机的ssh密钥</span><br></pre></td></tr></table></figure></p>
+<p>如果提示：No such file or directory, 说明你是第一次使用 git。</p>
+<h4 id="生成新的-SSH-Key："><a href="#生成新的-SSH-Key：" class="headerlink" title="生成新的 SSH Key："></a>生成新的 SSH Key：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;474733548@qq.com&quot;</span><br></pre></td></tr></table></figure>
+<p>在回车中会提示你输入一个密码，这个密码会在你提交项目时使用，如果为空的话提交项目时则不用输入。这个设置是防止别人往你的项目里提交内容。存放目录是c:/Users/hang/.ssh</p>
+<h4 id="添加帐号SSH-Keys"><a href="#添加帐号SSH-Keys" class="headerlink" title="添加帐号SSH Keys"></a>添加帐号SSH Keys</h4><ul>
+<li>登录Github，点击头像下的settings，添加ssh</li>
+<li>新建一个new ssh key，将id_rsa.pub文件里的内容复制上去,保存。</li>
+<li>测试</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+<p>如果是下面的提示：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">The authenticity of host &apos;GitHub.com (207.97.227.239)&apos; can&apos;t be established.</span><br><span class="line">RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.</span><br><span class="line">Are you sure you want to continue connecting (yes/no)?</span><br></pre></td></tr></table></figure></p>
+<p>SSH Key添加是否成功时，输入yes后出现Warning信息</p>
+<p>$ ssh -T <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">The authenticity of host &apos;github.com (13.229.188.59)&apos; can&apos;t be established.</span><br><span class="line">RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.</span><br><span class="line">Are you sure you want to continue connecting (yes/no)? yes</span><br><span class="line">Warning: Permanently added &apos;github.com,13.229.188.59&apos; (RSA) to the list of known hosts.</span><br><span class="line">Connection reset by 13.229.188.59 port 22</span><br></pre></td></tr></table></figure></p>
+<p>重新执行$ ssh -T <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>,输入密码就行,如下提示就好了。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ ssh -T git@github.com</span><br><span class="line">Warning: Permanently added the RSA host key for IP address &apos;52.74.223.119&apos; to the list of known hosts.</span><br><span class="line">Enter passphrase for key &apos;/c/Users/hang/.ssh/id_rsa&apos;:</span><br><span class="line">Hi liuleihang! You&apos;ve successfully authenticated, but GitHub does not provide shell access.</span><br></pre></td></tr></table></figure></p>
+<h3 id="4-创建文章"><a href="#4-创建文章" class="headerlink" title="4.创建文章"></a>4.创建文章</h3><p>hexo new post “文章名”<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">G:\2.workplace\blog&gt;hexo new post &quot;Hexo博客创建&quot;</span><br><span class="line">INFO  Created: G:\2.workplace\blog\source\_posts\Hexo博客创建.md</span><br></pre></td></tr></table></figure></p>
+<p><strong>参考</strong></p>
+<ul>
+<li><a href="https://www.cnblogs.com/fengxiongZz/p/7707219.html" target="_blank" rel="noopener">https://www.cnblogs.com/fengxiongZz/p/7707219.html</a></li>
+<li><a href="https://www.jianshu.com/p/05289a4bc8b2" target="_blank" rel="noopener">https://www.jianshu.com/p/05289a4bc8b2</a></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/04/04/Hexo博客创建/" data-id="cjfl9ued60000c0v2aglocduk" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2018/04/03/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/04/04/Hexo博客创建/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/04/03/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
