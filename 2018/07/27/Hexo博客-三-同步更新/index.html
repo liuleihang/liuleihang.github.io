@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="名词1234Workspace：工作区Index / Stage：暂存区Repository：仓库区（或本地仓库）Remote：远程仓库 常用命令https://www.cnblogs.com/chenwolong/p/GIT.html1234567891011git config --list  配置列表git status   检查当前文件状态git checkout hexo  #切换分支g">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo博客(三)同步更新">
+<meta property="og:url" content="http://blog.liuleihang.cn/2018/07/27/Hexo博客-三-同步更新/index.html">
+<meta property="og:site_name" content="转角">
+<meta property="og:description" content="名词1234Workspace：工作区Index / Stage：暂存区Repository：仓库区（或本地仓库）Remote：远程仓库 常用命令https://www.cnblogs.com/chenwolong/p/GIT.html1234567891011git config --list  配置列表git status   检查当前文件状态git checkout hexo  #切换分支g">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-07-27T16:00:08.530Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo博客(三)同步更新">
+<meta name="twitter:description" content="名词1234Workspace：工作区Index / Stage：暂存区Repository：仓库区（或本地仓库）Remote：远程仓库 常用命令https://www.cnblogs.com/chenwolong/p/GIT.html1234567891011git config --list  配置列表git status   检查当前文件状态git checkout hexo  #切换分支g">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://blog.liuleihang.cn/2018/07/27/Hexo博客-三-同步更新/"/>
+
+
+
+
+
+  <title>Hexo博客(三)同步更新 | 转角</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">转角</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://blog.liuleihang.cn/2018/07/27/Hexo博客-三-同步更新/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="liuleihang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="转角">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Hexo博客(三)同步更新</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-27T23:48:16+08:00">
+                2018-07-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="名词"><a href="#名词" class="headerlink" title="名词"></a>名词</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Workspace：工作区</span><br><span class="line">Index / Stage：暂存区</span><br><span class="line">Repository：仓库区（或本地仓库）</span><br><span class="line">Remote：远程仓库</span><br></pre></td></tr></table></figure>
+<h3 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h3><p><a href="https://www.cnblogs.com/chenwolong/p/GIT.html" target="_blank" rel="noopener">https://www.cnblogs.com/chenwolong/p/GIT.html</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">git config --list  配置列表</span><br><span class="line">git status   检查当前文件状态</span><br><span class="line">git checkout hexo  #切换分支</span><br><span class="line">git clone &lt;版本库的网址&gt; &lt;本地目录名&gt;   #克隆远程库并指定不同的目录名</span><br><span class="line">git submodule update --init --recursive  #从远程库下载子模块</span><br><span class="line">git clone yougiturl --recursive  #采用递归的方式clone整个项目(包含子项目时)</span><br><span class="line">git add &lt;change file&gt;  #将文件添加到stage</span><br><span class="line">git commit -m  &lt;message&gt;  #提交修改文件到本地库，标记提交信息</span><br><span class="line">git push origin branch #将本地库推送到远程库</span><br><span class="line">git pull 从另一个存储库或本地分支获取并集成(整合)https://blog.csdn.net/qq_15037231/article/details/77937402</span><br><span class="line">git clean -d -fx表示：删除一些没有git add的文件（慎用，不可恢复）</span><br></pre></td></tr></table></figure></p>
+<p>git reflog命令查看你的历史变更记录，<br>然后可以使用git reset –hard HEAD@{n}，（n是你要回退到的引用位置）回退</p>
+<p>需要拷贝的</p>
+<p>_config.yml，theme/，source/，scaffolds/，package.json，.gitignore</p>
+<p>需要删除</p>
+<p>.git/，node_modules/，public/，.deploy_git/，db.json</p>
+<h3 id="克隆gitHub上面生成的静态文件到本地"><a href="#克隆gitHub上面生成的静态文件到本地" class="headerlink" title="克隆gitHub上面生成的静态文件到本地"></a>克隆gitHub上面生成的静态文件到本地</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/yourname/hexo-test.github.io.git</span><br></pre></td></tr></table></figure>
+<h3 id="github创建并切换到分支hexo"><a href="#github创建并切换到分支hexo" class="headerlink" title="github创建并切换到分支hexo"></a>github创建并切换到分支hexo</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b hexo</span><br></pre></td></tr></table></figure>
+<h3 id="提交复制过来的文件到暂存区"><a href="#提交复制过来的文件到暂存区" class="headerlink" title="提交复制过来的文件到暂存区"></a>提交复制过来的文件到暂存区</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add --all</span><br></pre></td></tr></table></figure>
+<p>有时会出现一下错误</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">warning: LF will be replaced by CRLF in hexo/package-lock.json.</span><br><span class="line">The file will have its original line endings in your working directory.</span><br></pre></td></tr></table></figure>
+<p>这是因为文件中换行符的差别导致的。这个提示的意思是说：会把windows格式（CRLF）转换成Unix格式（LF），这些是转换文件格式的警告，不影响使用。</p>
+<h3 id="提交源文件"><a href="#提交源文件" class="headerlink" title="提交源文件"></a>提交源文件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m ./</span><br></pre></td></tr></table></figure>
+<h3 id="推送分支到github"><a href="#推送分支到github" class="headerlink" title="推送分支到github"></a>推送分支到github</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push --set-upstream origin hexo</span><br></pre></td></tr></table></figure>
+<p>这样每次写完博客发布之后不要忘了还要git push把hexo源文件push到分支上。</p>
+<ul>
+<li><p>这里引出一个知识点，git submodule（子模块）。</p>
+<p>git push成功之后去github网站上验证是否push成功，发现themes/next主题文件夹点不开。<a href="https://git-scm.com/book/zh/v2/Git-工具-子模块" target="_blank" rel="noopener">在这里</a>找到了答案。原因是因为当时next主题也是通过git clone下载的，也是一个独立的版本库。所以最好是当作一个子模块添加到你的库里边。</p>
+</li>
+</ul>
+<p>以后如果要在其他电脑上面用hexo写博客，就可以直接把创建的分支克隆下来，然后npm install安装依赖就可以用了。具体操作如下：</p>
+<ul>
+<li><p>克隆分支</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git clone -b &lt;branchname&gt; &quot;yourgithub&quot; &quot;dirname&quot; --recursive</span><br><span class="line"></span><br><span class="line">--recursive  #递归下载子模块</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>初始化node_modules,从package.json下载依赖</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="删除文件的提交记录（会删除github上的文件，提前备份）"><a href="#删除文件的提交记录（会删除github上的文件，提前备份）" class="headerlink" title="删除文件的提交记录（会删除github上的文件，提前备份）"></a>删除文件的提交记录（会删除github上的文件，提前备份）</h3><p><a href="https://help.github.com/articles/removing-sensitive-data-from-a-repository/" target="_blank" rel="noopener">https://help.github.com/articles/removing-sensitive-data-from-a-repository/</a><br><a href="https://blog.csdn.net/ysy950803/article/details/53383582" target="_blank" rel="noopener">https://blog.csdn.net/ysy950803/article/details/53383582</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">git filter-branch --force --index-filter &apos;git rm --cached --ignore-unmatch _config.yml&apos; --prune-empty --tag-name-filter cat -- --all</span><br><span class="line"></span><br><span class="line">git push origin hexo --force</span><br><span class="line"></span><br><span class="line">rm -rf .git/refs/original/</span><br><span class="line"></span><br><span class="line">git reflog expire --expire=now --all</span><br><span class="line"></span><br><span class="line">git gc --prune=now</span><br><span class="line"></span><br><span class="line">git gc --aggressive --prune=now</span><br></pre></td></tr></table></figure>
+<p>参考<br><a href="https://www.jianshu.com/p/beb8d611340a" target="_blank" rel="noopener">https://www.jianshu.com/p/beb8d611340a</a><br><a href="https://www.zhihu.com/question/21193762" target="_blank" rel="noopener">https://www.zhihu.com/question/21193762</a><br><a href="http://crazymilk.github.io/2015/12/28/GitHub-Pages-Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/" target="_blank" rel="noopener">http://crazymilk.github.io/2015/12/28/GitHub-Pages-Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</a></p>
+<p><a href="https://git-scm.com/book/zh/v2/%E8%B5%B7%E6%AD%A5-%E5%85%B3%E4%BA%8E%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6" target="_blank" rel="noopener">https://git-scm.com/book/zh/v2/%E8%B5%B7%E6%AD%A5-%E5%85%B3%E4%BA%8E%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6</a></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/07/27/Hexo博客-二-主题-图床-管理/" rel="next" title="Hexo博客(二)主题&图床&管理">
+                <i class="fa fa-chevron-left"></i> Hexo博客(二)主题&图床&管理
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">liuleihang</p>
+              <p class="site-description motion-element" itemprop="description">只有经历过，才会有深刻体会。</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">标签</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#名词"><span class="nav-number">1.</span> <span class="nav-text">名词</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常用命令"><span class="nav-number">2.</span> <span class="nav-text">常用命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#克隆gitHub上面生成的静态文件到本地"><span class="nav-number">3.</span> <span class="nav-text">克隆gitHub上面生成的静态文件到本地</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#github创建并切换到分支hexo"><span class="nav-number">4.</span> <span class="nav-text">github创建并切换到分支hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#提交复制过来的文件到暂存区"><span class="nav-number">5.</span> <span class="nav-text">提交复制过来的文件到暂存区</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#提交源文件"><span class="nav-number">6.</span> <span class="nav-text">提交源文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#推送分支到github"><span class="nav-number">7.</span> <span class="nav-text">推送分支到github</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#删除文件的提交记录（会删除github上的文件，提前备份）"><span class="nav-number">8.</span> <span class="nav-text">删除文件的提交记录（会删除github上的文件，提前备份）</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">liuleihang</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
