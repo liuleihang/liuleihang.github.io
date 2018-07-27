@@ -1,7 +1,8 @@
----
 title: Hexo博客(一)创建
-date: 2018-04-19 16:43:56
-tags: Hexo
+tags:
+  - Hexo
+categories: []
+date: 2018-04-19 16:43:00
 ---
 ## 准备
 
@@ -14,8 +15,6 @@ tags: Hexo
 ​	登录Github新建项目，项目必须要遵守格式：账户名.github.io，不然接下来会有很多麻烦。并且需要勾选Initialize this repository with a README
 
 ![新建项目](http://p6uif5qvi.bkt.clouddn.com/images/3-1-createRepository.png)
-
-### 
 
 ## 安装node版本管理工具NVM
 
