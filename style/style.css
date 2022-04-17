@@ -49,12 +49,12 @@ body {
 }
 
 .two {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: lighter;
 }
 
 .three {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .four .text-box {
@@ -99,7 +99,7 @@ body {
 }
 
 .five .idea-5 {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
 }
 
 .idea-5 span,
@@ -295,7 +295,7 @@ body {
   }
 
   .wish h5 {
-    font-size: 1.4rem;
+    font-size: 1rem;
   }
 
   .nine p {
