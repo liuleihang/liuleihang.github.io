@@ -1,0 +1,23 @@
+{
+  "name": "happy-birthday",
+  "version": "1.0.0",
+  "description": "happy-birthday",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liuleihang/liuleihang.github.io.git"
+  },
+  "keywords": [
+    "Happy",
+    "Birthday"
+  ],
+  "author": "liuleihang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/liuleihang/liuleihang.github.io/issues"
+  },
+  "homepage": "https://github.com/liuleihang/liuleihang.github.io#readme",
+  "dependencies": {}
+}
