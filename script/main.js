@@ -267,7 +267,7 @@ const animationTimeline = () => {
     )
     .staggerTo(
       ".eight svg",
-      1.5,
+      5,
       {
         visibility: "visible",
         opacity: 0,
@@ -277,12 +277,12 @@ const animationTimeline = () => {
       },
       0.3
     )
-    .to(".six", 0.5, {
+    /*.to(".six", 0.5, {
       opacity: 0,
       y: 30,
       zIndex: "-1"
     });
-    /* .staggerFrom(".nine p", 1, ideaTextTrans, 1.2)
+     .staggerFrom(".nine p", 1, ideaTextTrans, 1.2)
     .to(
       ".last-smile",
       0.5,
